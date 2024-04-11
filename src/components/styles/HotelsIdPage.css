@@ -1,0 +1,168 @@
+
+
+.hotelid {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    text-align: center;
+    
+}
+
+.hotelid__name {
+    text-align: center;
+    font-size: 2.3em;
+    margin-top: .5em;
+}
+.hotelid__rating{
+    font-size: 1.2em;
+    margin-top: .2em;
+}
+
+.hotelid__map{
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    align-content: center;
+    box-shadow: 0.5em 0.5em 3em #6969698c;
+}
+
+.hotelid__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 1em 0;
+    font-size: 1.3em;
+}
+
+.hotelid__name{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.hotelid__directions {
+    width: 100%;
+    font-size: 1em;
+    height: 1.2em;
+    display: flex;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+
+.hotelid__description {
+    display: flex;
+    margin-top: 1em;
+    line-height: 1.3;
+}
+
+.hotelid__container__reservation {
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.hotelid__reserve__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em 0;
+    gap: .5em;
+}
+
+.hoteid__reserve__title {
+    color: #d74bc2;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.hotelid__reserve__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.hotelid__container__fechas{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.hoteild__reserve__label {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 .6em;
+    width: 210px;
+}
+
+.hotelid__reserve__span {
+    color:  #d74bc2;
+    font-weight: 600;
+}
+
+
+.hotelid__container__btn-reserve {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hotelid__input__value {
+    width: 100%;
+    height: 1.85em;
+    font-size: 1em;
+    padding: .2em .5em;
+    border-radius: .51em;
+    border: 2px solid #903573d5;
+    box-shadow: 0 0 0.8em #e6a0a0d5;
+}
+
+.hotelid__reserve__btn {
+    margin: .5em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 130px;
+    height: 25px;
+    background-color: #d74bc2;
+    box-shadow: 0 0 0.8em #db87cf;
+    border: none;
+    border-radius: 1.5em;
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hotel__others {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.other__hotels{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+
+.other__tittle {
+    color: #d74bc2;
+    font-size: 1.25em;
+    font-weight: 800;
+}
+
+
+.hotel__other__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding: 2em 1em;
+}

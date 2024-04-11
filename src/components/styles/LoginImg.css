@@ -1,0 +1,41 @@
+.login {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: .5em;
+}
+
+.login__header {
+    width: 100%;
+    max-width: 230px;
+}
+
+.login__header .login__perfil__img {
+    border: 2px solid rgb(212, 92, 182);
+    border-radius: 50%;
+    box-shadow: 0 0 1em rgb(210, 61, 180);
+}
+
+.login .login__name {
+    margin-top: .2em;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(212, 92, 182);
+    
+}
+
+.login .login__btn {
+    margin-top: .5em;
+    width: 100%;
+    max-width: 6.5em;
+    height: 2em;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 0.5em rgb(212, 92, 182);
+    color: #cc1fa4;
+    background-color: rgb(235, 159, 216);
+    cursor: pointer;
+}

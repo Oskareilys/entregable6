@@ -1,0 +1,45 @@
+
+
+.cities__filt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+}
+
+
+.cities__filt-container .cities__items-total {
+    width: 100%;
+    padding: .2em 0;
+    margin-top: .5em;
+    text-align: center;
+    color: #e62aa7;
+    font-weight: 600;
+    border: 1px solid hwb(323 9% 22% / 0.315);
+    background-color: #c4699817;
+    cursor: pointer;
+}
+
+.other__filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.cities__filt-container .cities__filt-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    cursor: pointer;
+}
+
+.cities__filt-container .cities__filt-list .cities__items {
+    width: 100%;
+    text-align: center;
+    padding: .2em 0;
+    border: 1px solid hwb(323 9% 22% / 0.315);
+    background-color: #c4699817;
+}
