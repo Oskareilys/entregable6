@@ -46,6 +46,10 @@
     }
 }
 
+.slider__prev{
+    left: 0;
+}
+
 .slider__next{
     right: 0;
 }

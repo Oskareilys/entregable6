@@ -28,7 +28,7 @@ const SliderImgs = ( { hotel } ) => {
   return (
     <div className='slider__container'>
     <div className="slider">
-    <button onClick={handlePrev} className='slider__btn' >
+    <button onClick={handlePrev} className='slider__btn slider__prev' >
         &lt; 
     </button>
     <div style= {objStyle} className="slider__movable">

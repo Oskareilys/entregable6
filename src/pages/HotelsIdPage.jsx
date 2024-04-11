@@ -36,7 +36,7 @@ useEffect(() => {
         {
           hotel &&
           <div >
-            <Map height={200} defaultCenter={[+hotel.lat, +hotel.lon]} zoom ={15} maxZoom={16} minZoom={10}>
+            <Map height={250} defaultCenter={[+hotel.lat, +hotel.lon]} zoom ={15} maxZoom={16} minZoom={10}>
 
             <Overlay anchor={[+hotel.lat, +hotel.lon]} offset={[20, 20]}>
               <img className="hotelid__icon" src="/hotel-icon.png" alt="" width={30}/> 
