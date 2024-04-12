@@ -86,3 +86,7 @@
     font-weight: 600;
     color: #fff;
 }
+.message__error {
+    color: #d30595d5;
+    margin-top: 0.2em;
+  }

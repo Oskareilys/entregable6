@@ -12,6 +12,7 @@ import PrincipalHeader from './components/shared/PrincipalHeader'
 import ReservationsPage from './pages/ReservationsPage'
 import ProtectedRoute from './pages/ProtectedRoute'
 import FormContructions from './components/ReservationsPage/FormContructions'
+import FormReviews from './components/ReservationsPage/FormReviews'
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
       <Route path='/register' element={<RegisterPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route element = {<ProtectedRoute />}>
-        <Route path='/reservations' element={<FormContructions />} />
+        <Route path='/reservations' element={<ReservationsPage />} />
       </Route>
     </Routes>
 

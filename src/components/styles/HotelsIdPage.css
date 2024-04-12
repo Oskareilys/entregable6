@@ -167,3 +167,20 @@
     justify-content: center;
     padding: 2em 1em;
 }
+
+.title__comment {
+    font-size: 2em;
+    text-align: center;
+    color: #d74bc2;
+    
+    margin-bottom: 1em;
+  }
+
+  .detail__review {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+    gap: 2em;
+    padding: 0 2em;
+  }

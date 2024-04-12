@@ -107,6 +107,7 @@
     max-width: 280px;
 }
 .container__header {
+    flex-direction: wrap;
     display: flex;
     justify-content: start;
     align-items: center;

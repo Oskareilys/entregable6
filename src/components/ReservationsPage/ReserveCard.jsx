@@ -1,6 +1,6 @@
-import React from 'react'
+import '../styles/ReserveCard.css'
 
-const ReserveCard = ({ reserve, setReserveSelected, deleteBooking }) => {
+const ReserveCard = ({ reserve, setReserveSelected, deleteBooking, setReviewOpen }) => {
 
 
     const checkIn = new Date(reserve.checkIn)
@@ -8,6 +8,8 @@ const ReserveCard = ({ reserve, setReserveSelected, deleteBooking }) => {
 
     const reservationsDays = (checkOut - checkIn)/(1000 * 60 * 60 * 24)
     const subtotal = reserve.hotel.price * reservationsDays
+
+
     const handleReview = () => {
         const obj = {
             ...reserve,
@@ -16,35 +18,45 @@ const ReserveCard = ({ reserve, setReserveSelected, deleteBooking }) => {
 
         }
         setReserveSelected(obj)
+        setReviewOpen(false)
     }
 
-    const handleDeleteBooking =()=>{
+    const handleDelete =()=>{
         const url = `https://hotels-api.academlo.tech/bookings/${reserve.id}`
         deleteBooking(url,reserve.id )
     }
 
   return (
-    <article>
-        <header>
-            <img src={reserve.hotel.images[0].url} alt="" />
+    <article className='reserver__container'>
+      <div className='reserver__sub-cont'>
+        <header className='reserver__header'>
+          <img className='reserver__img' src={reserve.hotel.images[0].url} alt="" />
         </header>
-        <section>
-            <h3>{reserve.hotel.name}</h3>
-            <div>{reserve.hotel.city.name}, {reserve.hotel.city.country}</div>
-            <div onClick={handleReview}>Rate and comment this visit...</div>
+        <section className='reserver__hotel'>
+          <h3 className='reserver__name'>{reserve.hotel.name}</h3>
+          <div className='reserver__city'>{reserve.hotel.city.name}, {reserve.hotel.city.country}</div>
+          <div onClick={handleReview} className='reserver__coment'>Rate and comment this visit...</div>
         </section>
-        <section>
-            <ul>
-            <li><span>Reservation Days: </span><span>{reservationsDays}</span></li>
-            <li><span>subtotal Price: </span><span> {subtotal} USD</span></li>
-            </ul>
-        </section>
-        <footer>
-            <button onClick={handleDeleteBooking}>
-            <i className='bx bx-trash'></i>
-            </button>
-        </footer>
+      </div>
+      <section className='reserver__info'>
+        <ul className='reserver__list'>
+          <li className='reserver__item'>
+            <span className='reserver__text1'>Reservation Days</span>
+            <span className='reserver__number1'>{reservationsDays}</span>
+          </li>
+          <li className='reserver__item'>
+            <span className='reserver__text2'>subtotal Price</span>
+            <span className='reserver__number'>USD {subtotal}</span>
+          </li>
+        </ul>
+      </section>
+      <footer className='reserver__btn-cont'>
+        <button onClick={handleDelete} className='reserver__btn'>
+          <i className='bx bx-trash btn-img'></i>
+        </button>
+      </footer>
     </article>
+
   )
 }
 

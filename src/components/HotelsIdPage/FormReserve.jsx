@@ -12,6 +12,10 @@ const FormReserve = ( { hotelId }) => {
     const url = 'https://hotels-api.academlo.tech/bookings'
     data.hotelId = Number(hotelId)
     createBooking(url, data)
+    reset({
+      "checkIn": '',
+      "checkOut": '',
+    })
 
   }
 

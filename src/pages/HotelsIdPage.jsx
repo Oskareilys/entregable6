@@ -1,12 +1,14 @@
 import { Link, useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Map, Marker, Overlay } from "pigeon-maps"
 import '../components/styles/HotelsIdPage.css'
 import OtherHotels from "../components/HotelsIdPage/OtherHotels"
 import FormReserve from "../components/HotelsIdPage/FormReserve"
 import RatingStar from "../components/HomePage/RatingStar"
 import SliderImgs from "../components/HotelsIdPage/SliderImgs"
+import useCrud from "../hooks/useCrud"
+import CardReviews from "../components/CardReviews/CardReviews"
 
 
 
@@ -18,11 +20,21 @@ const url = `https://hotels-api.academlo.tech/hotels/${id}`
 
 const [ hotel, getHotel ] = useFetch(url)
 
+
+
 useEffect(() => {
 
   getHotel()
 
 }, [id])
+const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
+
+const [review, getReview] = useCrud()
+
+  useEffect(() => {
+    const url = `https://hotels-api.academlo.tech/reviews?hotelId=${hotel?.id}&userId=${user?.id}`
+    getReview(url)
+  }, [id])
 
   return (
     <div className="hotelid">
@@ -66,9 +78,22 @@ useEffect(() => {
       : <span >If you want to make a reservation, please. <Link to={'/login'}>login</Link> </span>
     }
 </section>
-<OtherHotels 
-  hotel = {hotel}
-/>
+<div>
+  <OtherHotels 
+    hotel = {hotel}
+  />
+</div>
+<h3 className='title__comment'>Comments</h3>
+      <div className='detail__review'>
+        {
+          review?.results.map((review, index) => (
+            <CardReviews
+              key={index}
+              review={review}
+            />
+          ))
+        }
+      </div>
 </div>
     
   )
