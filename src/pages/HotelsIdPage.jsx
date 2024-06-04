@@ -16,7 +16,7 @@ const HotelsIdPage = () => {
 
 const { id } = useParams()
 
-const url = `https://hotels-api.academlo.tech/hotels/${id}`
+const url = `https://hotels-app-7en4.onrender.com/hotels/${id}`
 
 const [ hotel, getHotel ] = useFetch(url)
 
@@ -32,9 +32,12 @@ const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
 const [review, getReview] = useCrud()
 
   useEffect(() => {
-    const url = `https://hotels-api.academlo.tech/reviews?hotelId=${hotel?.id}&userId=${user?.id}`
-    getReview(url)
-  }, [id])
+    console.log(hotel)
+    if (hotel) {
+      const url = `https://hotels-app-7en4.onrender.com/reviews?hotelId=${hotel?.id}&userId=${user?.id}`
+      getReview(url)
+    }
+  }, [id, hotel])
 
   return (
     <div className="hotelid">
@@ -86,7 +89,7 @@ const [review, getReview] = useCrud()
 <h3 className='title__comment'>Comments</h3>
       <div className='detail__review'>
         {
-          review?.results.map((review, index) => (
+          review?.map((review, index) => (
             <CardReviews
               key={index}
               review={review}

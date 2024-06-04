@@ -18,7 +18,7 @@ const HomePage = () => {
 
 
     const hotels= useSelector((states) => states.hotels )
-    //console.log(hotels)
+    console.log(hotels)
 
     const inputValue = useRef()
 

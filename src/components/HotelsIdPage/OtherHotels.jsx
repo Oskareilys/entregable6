@@ -5,7 +5,7 @@ import HotelCard from "../HomePage/HotelCard"
 
 const OtherHotels = ({ hotel }) => {
 
-    const url = `https://hotels-api.academlo.tech/hotels?cityId=${hotel?.cityId}`
+    const url = `https://hotels-app-7en4.onrender.com/hotels?cityId=${hotel?.cityId}`
 
     const [hotelsInCity, getHotelsInCity ] = useFetch(url)
 

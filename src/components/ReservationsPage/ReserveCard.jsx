@@ -22,7 +22,7 @@ const ReserveCard = ({ reserve, setReserveSelected, deleteBooking, setReviewOpen
     }
 
     const handleDelete =()=>{
-        const url = `https://hotels-api.academlo.tech/bookings/${reserve.id}`
+        const url = `https://hotels-app-7en4.onrender.com/bookings/${reserve.id}`
         deleteBooking(url,reserve.id )
     }
 

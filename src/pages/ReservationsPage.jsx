@@ -15,7 +15,7 @@ const ReservationsPage = () => {
     const [reserveSelected, setReserveSelected] = useState()
 
     useEffect(()=>{
-      const url = 'https://hotels-api.academlo.tech/bookings'
+      const url = 'https://hotels-app-7en4.onrender.com/bookings'
       getBookings(url)  
 
     },[])

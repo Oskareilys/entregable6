@@ -19,7 +19,7 @@ const FormReviews = ( { reserveSelected, setReserveSelected,reviewOpen, setRevie
     const [,,createreview]=useCrud()
 
     const submit = data => {
-        const url = 'https://hotels-api.academlo.tech/reviews'
+        const url = 'https://hotels-app-7en4.onrender.com/reviews'
         data.hotelId = reserveSelected?.hotel.id
         data.comment = data.comment
         data.rating =  +data.rating
